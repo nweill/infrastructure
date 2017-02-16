@@ -15,7 +15,7 @@ sudo apt-get update
 sudo apt-get install ansible
 ```
 ###run a playbook
-`sudo ansible-playbook -i "localhost, " -c local [script.yml]`
+`sudo ansible-playbook -i "localhost, " -c local [install.yml]`
 
 script.yml is the file containing the playbook.
 

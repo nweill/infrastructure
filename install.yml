@@ -1,0 +1,12 @@
+---
+ - hosts: all
+   sudo: yes
+   tasks:
+
+   - name: install multiple packages
+     action: apt pkg={{item}} state=installed
+     with_items:
+       - git
+       - vim
+
+
