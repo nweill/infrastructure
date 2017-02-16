@@ -19,7 +19,7 @@ sudo apt-get install ansible
 
 script.yml is the file containing the playbook.
 
-## assumtions
+## assumptions
 > this machine will be able to develop code on java, python and R.
 
 
