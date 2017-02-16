@@ -9,9 +9,11 @@ I assumed the starting OS would be ubuntu 16.04.
 
 ## steps:
 ###install ansible
-`sudo apt-add-repository ppa:ansible/ansible`
-`sudo apt-get update`
-`sudo apt-get install ansible`
+```
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
+```
 ###run a playbook
 `sudo ansible-playbook -i "localhost, " -c local [script.yml]`
 
