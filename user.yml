@@ -1,0 +1,31 @@
+---
+ - hosts: all
+   sudo: no
+   tasks:
+   - name: pycharm dl
+     get_url:
+       url: https://download.jetbrains.com/python/pycharm-community-2016.3.2.tar.gz
+       dest: /tmp/pycharm-community-2016.3.2.tar.gz
+   - file:
+       path: "{{ ansible_env.HOME}}/opt/"
+       state: directory
+   - name: pycharm untar
+     unarchive:
+       src: /tmp/pycharm-community-2016.3.2.tar.gz
+       dest: "{{ ansible_env.HOME}}/opt/"
+
+   - name: aliases
+     lineinfile:
+       dest: ~/.bash_aliases
+       line: 'alias lt=ls -lrt'
+       create: yes
+   - name: aliases
+     lineinfile:
+       dest: ~/.bash_aliases
+       line: 'alias pycharm=~/opt/pycharm-community-2016.3.2/bin/pycharm.sh'
+
+
+
+
+  
+
