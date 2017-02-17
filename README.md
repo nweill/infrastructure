@@ -17,8 +17,10 @@ sudo apt-get install ansible
 ###run a playbook
 `sudo ansible-playbook -i "localhost, " -c local [install.yml]`
 
-script.yml is the file containing the playbook.
-
+install.yml is the file containing the playbook.
+some play book might require sudo (E.g. install.yml) and other playbook might not (user.yml)
+###one line to run everything (just do that if you don whant to understand anything)
+`bash update.sh`
 ## assumptions
 > this machine will be able to develop code on java, python and R.
 
